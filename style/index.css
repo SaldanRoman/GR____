@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+:root {
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    --main-color: #ceb281;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --dark-color: #333333;
+    --grey-color: #6f747a;
+    --section-margin: 80px;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%
+}
+
+.move-down {
+    border-top: 2px solid var(--main-color);
+    padding-top: 60px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+}
+
+.move-down>a {
+    width: 32px;
+    height: 32px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    outline: none;
+}
+
+header {
+    background-image: url(../images/topbg-1-1.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    padding: 100px 0 80px 0;
+    margin-bottom: var(--section-margin);
+}
+
+.header-name {
+    margin: 20px 0;
+    font-family: 'Lora', serif;
+}
+
+.header-logo {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 35px;
+}
+
+.header-description {
+    padding: 0 10px;
+    text-align: center;
+    text-shadow: 0px 0px 1px var(--dark-color);
+    font-size: 20px
+}
+
+section {
+    margin-top: var(--section-margin);
+    margin-bottom: var(--section-margin);
+}
+
+section h2 {
+    text-align: center;
+    font-size: 30px;
+    color: var(--dark-color);
+    font-family: 'Lora', serif;
+    font-weight: 400;
+}
+
+section p {
+    margin: 40px 0;
+    text-align: center;
+    font-size: 24px;
+    color: var(--grey-color);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+    margin-bottom: 40px;
+}
+
+.item-content-img {
+    margin-bottom: 32px;
+    padding: 31px 0;
+    color: var(--main-color);
+    width: 100px;
+}
+
+.item-content-text {
+    font-size: 22px;
+    text-align: center;
+    margin: 0;
+    font-family: 'Lora', serif;
+    letter-spacing: 0;
+}
+
+.about-text {
+    padding: 0 10px;
+}
+
+.about-text li {
+    color: var(--dark-color);
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.about-img {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-image {
+    max-width: 250px;
+}
+
+@media screen and (max-width: 866px) {
+    #aboutUs .content {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 840px) {
+    .content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    #practiceAreas .item-content-text {
+        letter-spacing: 3.2px
+    }
+
+    section h2 {
+        font-size: 40px;
+    }
+
+    section h2::before {
+        content: "";
+        width: 36px;
+        border-top: 2px solid var(--main-color);
+        position: absolute;
+        margin-left: -60px;
+        margin-top: 22px;
+    }
+
+    section h2::after {
+        content: "";
+        width: 36px;
+        border-top: 2px solid var(--main-color);
+        position: absolute;
+        margin-left: 30px;
+        margin-top: 22px;
+    }
+
+    .about-text {
+        width: 60%;
+    }
+
+    .about-img {
+        width: 40%;
+    }
+
+    .logo-image {
+        max-width: 250px;
+    }
+}
