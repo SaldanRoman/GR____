@@ -9,6 +9,7 @@
     --black-color: #000000;
     --dark-color: #333333;
     --grey-color: #6f747a;
+    --transperant-color: rgba(0, 0, 0, 0.8);
     /**/
     --section-margin: 80px;
 }
@@ -17,6 +18,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .tooltip {
     position: relative;
 }
@@ -46,10 +48,90 @@ body {
     border-style: solid;
     border-color: black transparent transparent transparent;
 }
+/**/
 
-.tooltip:hover .tooltiptext {
-    visibility: visible;
+/* menu */
+
+menu {
+    width: 0;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    transition: .4s;
+    position: fixed;
+    background-color: var(--transperant-color);
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+#menuList {
+    display: none;
+    flex-direction: column;
+}
+
+.menu-list-item {
+    margin: 20px 0;
+}
+
+.menu-list-item--last {
+    position: absolute;
+    bottom: 0;
+}
+
+.menu-list-item--last span {
+    color: var(--white-color);
+}
+
+menu a {
+    text-decoration: none;
+    font-size: 26px;
+    color: var(--main-color);
+}
+
+menu a:hover {
+    color: var(--white-color);
+    transition: .3s;
+}
+
+.menu-open {
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px;
+    width: 40px;
+    height: 40px;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.menu-open:hover {
+    color: var(--dark-color);
+    transition: .3s;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.menu-close {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+.menu-close:hover {
+    color: var(--white-color);
+    transition: .3s;
+}
+
+
 
 /* FORM */
 .form {
@@ -290,6 +372,9 @@ section p {
     font-size: 20px;
     font-family: 'Lora', serif;
     text-align: center;
+    text-decoration: none;
+    margin: 10px 0;
+    display: block;
 }
 
 .info-phone-number {
@@ -324,6 +409,35 @@ section p {
 }
 
 @media screen and (min-width: 840px) {
+    menu {
+        flex-direction: row;
+        height: 100px;
+    }
+
+    #menuList {
+        align-items: center;
+        flex-direction: row;
+    }
+
+    
+    .menu-list-item {
+        margin: 10px;
+    }
+
+    .menu-list-item--last {
+        bottom: unset;
+        right: 0;
+        margin: 20px;
+    }
+
+    menu a {
+        font-size: 18px;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+    
     .content {
         flex-direction: row;
         align-items: center;
