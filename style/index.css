@@ -279,11 +279,16 @@ section p {
     color: var(--white-color);
 }
 
+#info {
+    padding: 10px;
+}
+
 .info-location {
     color: var(--main-color);
     letter-spacing: 1.6px;
     text-transform: uppercase;
-    font: 20px/30px 'Lora', serif;
+    font-size: 20px;
+    font-family: 'Lora', serif;
     text-align: center;
 }
 
@@ -293,7 +298,8 @@ section p {
     color: var(--black-color);
     letter-spacing: 3px;
     text-transform: uppercase;
-    font: 30px 'Lora', serif;
+    font-size: 20px;
+    font-family: 'Lora', serif;
     text-align: center;
     text-decoration: none;
 }
@@ -380,4 +386,9 @@ section p {
     .logo-image {
         max-width: 250px;
     }
+
+    .info-phone-number {
+        font-size: 30px;
+    }
+    
 }
