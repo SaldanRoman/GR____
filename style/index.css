@@ -17,20 +17,23 @@ body {
     margin: 0;
     padding: 0;
 }
+.tooltip {
+    position: relative;
+}
 
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    min-width: 120px;
     background-color: black;
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 5px 5px;
     position: absolute;
     z-index: 1;
     bottom: 150%;
+    transform: translateX(-50%);
     left: 50%;
-    margin-left: -60px;
 }
 
 .tooltip .tooltiptext::after {
@@ -149,7 +152,7 @@ img {
 }
 
 header {
-    background-image: url(../images/topbg-1-1.jpg);
+    background-image: url(../images/topbg.jpg);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -233,15 +236,27 @@ section p {
     padding: 0 10px;
 }
 
-.about-text li {
-    color: var(--dark-color);
-    font-size: 18px;
-    margin: 5px 0;
-}
-
 .about-img {
     display: flex;
     justify-content: center;
+}
+
+#mainServices {
+    background-image: url(../images/midbg.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 0;
+}
+
+#mainServices h2 {
+    color: var(--white-color);
+}
+
+#mainServices li {
+    color: var(--white-color);
+    font-size: 18px;
+    margin: 10px 0;
 }
 
 .logo-image {
@@ -262,6 +277,38 @@ section p {
 
 #contacts p {
     color: var(--white-color);
+}
+
+.info-location {
+    color: var(--main-color);
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    font: 20px/30px 'Lora', serif;
+    text-align: center;
+}
+
+.info-phone-number {
+    margin-bottom: 20px;
+    display: block;
+    color: var(--black-color);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font: 30px 'Lora', serif;
+    text-align: center;
+    text-decoration: none;
+}
+
+.info-socials {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.social-link {
+    margin: 10px;
+    width: 32px;
+    color: var(--main-color);
 }
 
 @media screen and (max-width: 866px) {
