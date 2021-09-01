@@ -18,7 +18,7 @@ body {
     margin: 0;
     padding: 0;
 }
-
+/* TOOLTIP */
 .tooltip {
     position: relative;
 }
@@ -53,36 +53,31 @@ body {
 /* menu */
 
 menu {
-    width: 0;
     height: 100%;
     padding: 0;
     margin: 0;
-    transition: .4s;
+    transition: .3s;
     position: fixed;
     background-color: var(--transperant-color);
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
+    transform: translateX(-100%);
 }
 
 #menuList {
-    display: none;
+    display: flex;
     flex-direction: column;
+    padding: 0;
+    margin-left: 25px;
 }
 
 .menu-list-item {
     margin: 20px 0;
-}
-
-.menu-list-item--last {
-    position: absolute;
-    bottom: 0;
-}
-
-.menu-list-item--last span {
-    color: var(--white-color);
 }
 
 menu a {
@@ -98,7 +93,7 @@ menu a:hover {
 
 .menu-open {
     border-radius: 50%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     margin: 25px;
@@ -115,10 +110,6 @@ menu a:hover {
 }
 
 .menu-close {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
     margin: 25px;
     width: 40px;
     height: 40px;
@@ -130,8 +121,7 @@ menu a:hover {
     color: var(--white-color);
     transition: .3s;
 }
-
-
+/**/
 
 /* FORM */
 .form {
@@ -207,12 +197,30 @@ menu a:hover {
     background-color: var(--white-color);
     border-color: var(--white-color);
 }
-
 /**/
 
 img {
     width: 100%
 }
+
+/* SWITCH LANG LINK */
+.switch-lang-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+}
+
+.switch-lang-link a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.switch-lang-link a:hover {
+    color: var(--white-color);
+    text-shadow: 0 0 1px var(--black-color);
+}
+/**/
 
 .move-down {
     border-top: 2px solid var(--main-color);
@@ -343,6 +351,7 @@ section p {
 
 .logo-image {
     max-width: 250px;
+    margin: 25px;
 }
 
 #contacts {
@@ -412,22 +421,19 @@ section p {
     menu {
         flex-direction: row;
         height: 100px;
+        align-items: center;
     }
 
     #menuList {
         align-items: center;
         flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     
     .menu-list-item {
         margin: 10px;
-    }
-
-    .menu-list-item--last {
-        bottom: unset;
-        right: 0;
-        margin: 20px;
     }
 
     menu a {
@@ -495,10 +501,6 @@ section p {
 
     .about-img {
         width: 40%;
-    }
-
-    .logo-image {
-        max-width: 250px;
     }
 
     .info-phone-number {

@@ -1,22 +1,17 @@
 const closeMenuButton = document.querySelector('.menu-close');
 const openMenuButton = document.querySelector('.menu-open');
 const menu = document.getElementById('menu');
-const menuList = document.getElementById('menuList');
 const menuListItems = document.querySelectorAll('.menu-list-item');
 
 
 const closeMenu = () => {
-    openMenuButton.style.display = 'block'
-    menu.style.width = '0'
-    menuList.style.display = 'none';
-    closeMenuButton.style.display = 'none'
+    openMenuButton.style.display = 'block';
+    menu.style.transform = "translateX(-100%)";
 }
 
 const openMenu = () => {
-    openMenuButton.style.display = 'none'
-    menu.style.width = '100%'
-    menuList.style.display = 'flex';
-    closeMenuButton.style.display = 'block'
+    openMenuButton.style.display = 'none';
+    menu.style.transform = "unset";
 }
 
 
